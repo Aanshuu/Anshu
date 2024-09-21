@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        body: ['Poppins', 'sans-serif'], // Define the 'font-body' class
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -16,7 +19,7 @@ const config: Config = {
       },
       colors: {
         background: {
-          light: "#ffffff",
+          light: "#f2f2f2",
           dark: "#1a1a1a",
         },
         text: {
