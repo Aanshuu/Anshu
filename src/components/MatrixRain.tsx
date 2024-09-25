@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import MaxWidthWrapper from './common/MaxWidthWrapper';
 
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 const generateRandomChar = () => characters[Math.floor(Math.random() * characters.length)];
@@ -45,7 +46,8 @@ const MatrixRain = () => {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-10 overflow-hidden">
+    <MaxWidthWrapper>
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       {matrix.map((drop) => (
         <div key={drop.id} className="absolute" style={{ left: drop.x }}>
           {drop.chars.map((char, index) => (
@@ -71,6 +73,8 @@ const MatrixRain = () => {
         </div>
       ))}
     </div>
+    </MaxWidthWrapper>
+    
   );
 };
 
