@@ -34,14 +34,14 @@ const TypewriterText = () => {
       <motion.h1
         initial="hidden"
         whileInView="visible"
-        transition={{ staggerChildren: 0.05 }}
+        transition={{ staggerChildren: 0.01 }}
         className="text-md font-bold text-black dark:text-[#FECFC5] z-20"
       >
         {descriptionChars.map((char) => (
           <motion.span
             key={char}
             variants={charVariants}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.05 }}
           >
             {char}
           </motion.span>
