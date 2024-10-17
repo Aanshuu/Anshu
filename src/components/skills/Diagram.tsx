@@ -486,13 +486,13 @@ export default function Diagram() {
           strokeWidth="2"
           strokeDasharray="5 5"
           fill="transparent"
-          // initial={{ pathLength: 0 }}
-          // animate={{ pathLength: 1 }}
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          variants={lineVariant}
-          custom={hoveredNode === "HTML" || hoveredNode === "React"}
-          initial="initial"
-          animate="animate"
+          // variants={lineVariant}
+          // custom={hoveredNode === "HTML" || hoveredNode === "React"}
+          // initial="initial"
+          // animate="animate"
         />
 
         {/* Javascript to react */}
@@ -501,13 +501,13 @@ export default function Diagram() {
           stroke="black"
           strokeWidth="2"
           fill="transparent"
-          // initial={{ pathLength: 0 }}
-          // animate={{ pathLength: 1 }}
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          variants={lineVariant}
-          custom={hoveredNode === "Javascript" || hoveredNode === "React"}
-          initial="initial"
-          animate="animate"
+          // variants={lineVariant}
+          // custom={hoveredNode === "Javascript" || hoveredNode === "React"}
+          // initial="initial"
+          // animate="animate"
         />
         {/* Css to react */}
         <motion.path
@@ -538,9 +538,12 @@ export default function Diagram() {
           strokeWidth="2"
           strokeDasharray="5 5"  // Dashed pattern
           fill="transparent"
-          initial={{ opacity: 0, strokeDashoffset:20 }}  // Initially invisible
-          animate={{ opacity: 1, strokeDashoffset:0 }}  // Animate opacity to reveal the line
-          transition={{ duration: 0.5, ease: "easeInOut" }}  // Match transition with solid line
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          // initial={{ opacity: 0, strokeDashoffset:20 }}  // Initially invisible
+          // animate={{ opacity: 1, strokeDashoffset:0 }}  // Animate opacity to reveal the line
+          // transition={{ duration: 0.5, ease: "easeInOut" }}  // Match transition with solid line
         />
 
         {/* NodeJs to ExpressJs */}
