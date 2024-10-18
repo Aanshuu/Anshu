@@ -10,6 +10,8 @@ import { ThemeProvider } from "@/components/theme/ThemeContext";
 import Navbar from "@/components/common/Navbar";
 // import Setup from "@/components/skills/Setup";
 import Diagram from "@/components/skills/Diagram";
+import ToggleButton from "@/components/ToggleButton";
+import Flow from "@/components/skills/TechStackFlow";
 
 export default function Home() {
   return (
@@ -61,9 +63,11 @@ export default function Home() {
               <Slider />
             </div>
           </div>
-          {/* <Setup/> */}
+          {/* <Setup/> */} 
           <div className="flex items-center justify-center">
+            {/* <ToggleButton/> */}
             <Diagram />
+            <Flow/>
           </div>
         </MaxWidthWrapper>
       </div>

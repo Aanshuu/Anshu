@@ -5,5 +5,11 @@
         "lucide",
         "Starrger",
         "Trpc"
+    ],
+    "cSpell.ignoreWords": [
+        "Nextjs",
+        "reactflow",
+        "smoothstep",
+        "xyflow"
     ]
 }
