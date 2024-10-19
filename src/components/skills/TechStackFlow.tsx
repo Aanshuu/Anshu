@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { Handle, Position, ReactFlow, Controls, Background, useNodesState, useEdgesState } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -246,7 +244,6 @@ const initialEdges = [
   },
 ];
 
-
 // Register custom node type
 const nodeTypes = { customNode: CustomNode };
 
@@ -255,58 +252,19 @@ function Flow() {
   const [edges] = useEdgesState(initialEdges); // Static edges
 
   return (
-    <div style={{ height: '100vh', width: '100vw' }}>
+    <div style={{ height: '600px', width: '600px' }} className="flow-container">
       <ReactFlow
         nodes={nodes}
         edges={edges}
         nodeTypes={nodeTypes} // Use custom node type
         fitView
+        panOnDrag={false}    // Disable drag
+        zoomOnScroll={false} // Disable zoom
+        attributionPosition="bottom-right" // Position can be set, but we'll hide it with CSS // Hide React Flow tag
       >
-        <Controls />
-        <Background />
       </ReactFlow>
     </div>
   );
 }
 
 export default Flow;
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import { ReactFlow, Controls, Background } from '@xyflow/react';
-// import '@xyflow/react/dist/style.css';
-
-// const edges = [{ id: '1-2', source: '1', target: '2' }];
-
-// const nodes = [
-//   {
-//     id: '1',
-//     data: { label: 'Hello' },
-//     position: { x: 50, y: 50 }, // Adjusted position
-//     type: 'input',
-//   },
-//   {
-//     id: '2',
-//     data: { label: 'World' },
-//     position: { x: 200, y: 150 }, // Adjusted position
-//   },
-// ];
-
-// function Flow() {
-//   return (
-//     <div style={{ height: '100vh', width: '100vw' }}>
-//       <ReactFlow nodes={nodes} edges={edges}>
-//         <Background />
-//         <Controls />
-//       </ReactFlow>
-//     </div>
-//   );
-// }
-
-// export default Flow;
