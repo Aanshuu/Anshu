@@ -17,3 +17,7 @@
   }
 }
 
+.flow-container .react-flow__attribution {
+  display: none;
+}
+
