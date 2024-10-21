@@ -8,16 +8,22 @@ import TypewriterText from "@/components/TypewriterText";
 import Slider from "@/components/Slider";
 import { ThemeProvider } from "@/components/theme/ThemeContext";
 import Navbar from "@/components/common/Navbar";
-// import Setup from "@/components/skills/Setup";
 import Diagram from "@/components/skills/Diagram";
-import ToggleButton from "@/components/ToggleButton";
 import Flow from "@/components/skills/TechStackFlow";
+import { Switch } from "@/components/ui/switch";
+import { CardHoverEffectDemo } from "@/components/info/Projects";
+// import { NavigationButtons } from "@/components/Tabs";
+import { ProjectsExperienceDemo } from "@/components/Tabs";
 
 export default function Home() {
+  const [showDiagram, setShowDiagram] = useState(false);
+
+  const handleToggle = (checked: boolean) => {
+    console.log("Switch toggled:", checked); // Debug log
+    setShowDiagram(checked);
+  };
   return (
     <ThemeProvider>
-
-
       {/* <div>
         <div className="relative isolate">
           <div
@@ -63,11 +69,25 @@ export default function Home() {
               <Slider />
             </div>
           </div>
-          {/* <Setup/> */} 
-          <div className="flex items-center justify-center">
-            {/* <ToggleButton/> */}
-            <Diagram />
-            <Flow/>
+          {/* <Setup/> */}
+
+          <div className="flex flex-col items-center justify-center mt-8">
+            {/* Debug text */}
+            {/* <p>Is the switch rendering below?</p> */}
+
+            <Switch
+              onCheckedChange={handleToggle}
+              defaultChecked={showDiagram}
+              className="bg-black dark:bg-white"
+            />
+            <div className="ml-4">
+              <span className="text-sm text-gray-700">
+                {showDiagram ? <Diagram /> : <Flow />} {/* Debug text */}
+              </span>
+            </div>
+          </div>
+          <div>
+            <ProjectsExperienceDemo />
           </div>
         </MaxWidthWrapper>
       </div>
