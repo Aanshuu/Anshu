@@ -1,9 +1,9 @@
 "use client";
 
 import MaxWidthWrapper from "@/components/common/MaxWidthWrapper";
-import { useState, useEffect } from "react";
-import ThemeToggle from "@/components/theme/ThemeToggle";
-import MatrixRain from "@/components/MatrixRain";
+import { useState } from "react";
+// import ThemeToggle from "@/components/theme/ThemeToggle";
+// import MatrixRain from "@/components/MatrixRain";
 import TypewriterText from "@/components/TypewriterText";
 import Slider from "@/components/Slider";
 import { ThemeProvider } from "@/components/theme/ThemeContext";
@@ -11,7 +11,7 @@ import Navbar from "@/components/common/Navbar";
 import Diagram from "@/components/skills/Diagram";
 import Flow from "@/components/skills/TechStackFlow";
 import { Switch } from "@/components/ui/switch";
-import { CardHoverEffectDemo } from "@/components/info/Projects";
+// import { CardHoverEffectDemo } from "@/components/info/Projects";
 // import { NavigationButtons } from "@/components/Tabs";
 import { ProjectsExperienceDemo } from "@/components/Tabs";
 

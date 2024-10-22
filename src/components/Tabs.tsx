@@ -84,7 +84,7 @@ export function ProjectsExperienceDemo() {
       title: "Projects / Works",
       value: "projects",
       content: (
-        <div className="">
+        <div>
           <CardHoverEffectDemo />
         </div>
       ),
@@ -93,7 +93,7 @@ export function ProjectsExperienceDemo() {
       title: "Experience",
       value: "experience",
       content: (
-        <div className="">
+        <div>
           <TimelineDemo/>
         </div>
       ),
@@ -102,7 +102,7 @@ export function ProjectsExperienceDemo() {
       title: "Personal",
       value: "Personal",
       content: (
-        <div className="">
+        <div>
         </div>
       ),
     },

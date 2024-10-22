@@ -1,4 +1,3 @@
-import { linkVertical } from "d3";
 import { HoverEffect } from "../ui/card-hover-effect";
  
 export function CardHoverEffectDemo() {
