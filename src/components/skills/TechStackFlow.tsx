@@ -3,10 +3,11 @@ import {
   Handle,
   Position,
   ReactFlow,
-  Controls,
-  Background,
+  // Controls,
+  // Background,
   useNodesState,
-  useEdgesState,
+  // useEdgesState,
+  Edge,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import {
@@ -143,7 +144,6 @@ const initialNodes = [
   {
     id: "1",
     data: {
-      label: "Tech Stack",
       icon: <GiTechnoHeart size={40} className="text-white dark:text-black"/>,
     }, // TypeScript Icon
     position: { x: 350, y: 275 },
@@ -151,14 +151,13 @@ const initialNodes = [
   },
   {
     id: "2",
-    data: { label: "Node.js", icon: <FaNodeJs size={40} color="#68A063" /> }, // Node.js Icon
+    data: { icon: <FaNodeJs size={40} color="#68A063" /> }, // Node.js Icon
     position: { x: 250, y: 50 }, // Adjust the position for better spacing
     type: "customNode", // Specify custom node type
   },
   {
     id: "3",
     data: {
-      label: "TypeScript",
       icon: <SiTypescript size={40} color="#007acc" />,
     }, // TypeScript Icon
     position: { x: 450, y: 50 },
@@ -166,41 +165,39 @@ const initialNodes = [
   },
   {
     id: "4",
-    data: { label: "React", icon: <FaReact size={40} color="#61dafb" /> }, // React Icon
+    data: { icon: <FaReact size={40} color="#61dafb" /> }, // React Icon
     position: { x: 50, y: 50 },
     type: "customNode", // Specify custom node type
   },
   {
     id: "5",
-    data: { label: "CSS", icon: <FaCss3Alt size={40} color="#61dafb" /> }, // React Icon
+    data: { icon: <FaCss3Alt size={40} color="#61dafb" /> }, // React Icon
     position: { x: 50, y: 200 },
     type: "customNode", // Specify custom node type
   },
   {
     id: "6",
     data: {
-      label: "JavaScript",
-      icon: <IoLogoJavascript size={40} color="#ffde21" />,
+      icon: <IoLogoJavascript size={40} color="#fbb917" />,
     }, // React Icon
     position: { x: 50, y: 350 },
     type: "customNode", // Specify custom node type
   },
   {
     id: "7",
-    data: { label: "HTML", icon: <FaHtml5 size={40} color="#e34c26" /> }, // React Icon
+    data: { icon: <FaHtml5 size={40} color="#e34c26" /> }, // React Icon
     position: { x: 50, y: 500 },
     type: "customNode", // Specify custom node type
   },
   {
     id: "8",
-    data: { label: "Framer", icon: <SiFramer size={40} className="text-white dark:text-black" /> }, // React Icon
+    data: {  icon: <SiFramer size={40} className="text-white dark:text-black" /> }, // React Icon
     position: { x: 250, y: 500 },
     type: "customNode", // Specify custom node type
   },
   {
     id: "9",
     data: {
-      label: "TailwindCSS",
       icon: <RiTailwindCssFill size={40} color="#61dafb" />,
     }, // React Icon
     position: { x: 450, y: 500 },
@@ -208,20 +205,19 @@ const initialNodes = [
   },
   {
     id: "10",
-    data: { label: "Git", icon: <FaGitAlt size={40} className="text-white dark:text-black" /> }, // React Icon
+    data: { icon: <FaGitAlt size={40} className="text-white dark:text-black" /> }, // React Icon
     position: { x: 650, y: 500 },
     type: "customNode", // Specify custom node type
   },
   {
     id: "11",
-    data: { label: "NextJs", icon: <RiNextjsFill size={40} className="text-white dark:text-black" /> }, // React Icon
+    data: { icon: <RiNextjsFill size={40} className="text-white dark:text-black" /> }, // React Icon
     position: { x: 650, y: 50 },
     type: "customNode", // Specify custom node type
   },
   {
     id: "12",
     data: {
-      label: "PocketBase",
       icon: <SiPocketbase size={40} className="text-white dark:text-black" />,
     }, // React Icon
     position: { x: 650, y: 200 },
@@ -230,7 +226,6 @@ const initialNodes = [
   {
     id: "13",
     data: {
-      label: "FireBase",
       icon: <IoLogoFirebase size={40} className="text-white dark:text-black" />,
     }, // React Icon
     position: { x: 650, y: 350 },
@@ -246,7 +241,7 @@ const nodeTypes = { customNode: CustomNode };
 function Flow() {
   const [nodes] = useNodesState(initialNodes); // Static nodes
   const { theme } = useTheme();
-  const [edges, setEdges] = useState<any>([]);
+  const [edges, setEdges] = useState<Edge[]>([]);
 
   useEffect(() => {
     const updatedEdges = [
