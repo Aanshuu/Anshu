@@ -33,7 +33,7 @@ interface IconNodeProps {
 // Define the custom node component with hidden Handles
 const CustomNode: React.FC<IconNodeProps> = ({ data }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center border border-gray-300">
+    <div className="dark:bg-primary bg-black rounded-lg shadow-md p-4 flex flex-col items-center border border-gray-300">
       {/* Add specific IDs to the target handles */}
       <Handle
         type="target"
@@ -144,7 +144,7 @@ const initialNodes = [
     id: "1",
     data: {
       label: "Tech Stack",
-      icon: <GiTechnoHeart size={40} color="#000000" />,
+      icon: <GiTechnoHeart size={40} className="text-white dark:text-black"/>,
     }, // TypeScript Icon
     position: { x: 350, y: 275 },
     type: "customNode", // Specify custom
@@ -193,7 +193,7 @@ const initialNodes = [
   },
   {
     id: "8",
-    data: { label: "Framer", icon: <SiFramer size={40} color="#000000" /> }, // React Icon
+    data: { label: "Framer", icon: <SiFramer size={40} className="text-white dark:text-black" /> }, // React Icon
     position: { x: 250, y: 500 },
     type: "customNode", // Specify custom node type
   },
@@ -208,13 +208,13 @@ const initialNodes = [
   },
   {
     id: "10",
-    data: { label: "Git", icon: <FaGitAlt size={40} color="#000000" /> }, // React Icon
+    data: { label: "Git", icon: <FaGitAlt size={40} className="text-white dark:text-black" /> }, // React Icon
     position: { x: 650, y: 500 },
     type: "customNode", // Specify custom node type
   },
   {
     id: "11",
-    data: { label: "NextJs", icon: <RiNextjsFill size={40} color="#000000" /> }, // React Icon
+    data: { label: "NextJs", icon: <RiNextjsFill size={40} className="text-white dark:text-black" /> }, // React Icon
     position: { x: 650, y: 50 },
     type: "customNode", // Specify custom node type
   },
@@ -222,7 +222,7 @@ const initialNodes = [
     id: "12",
     data: {
       label: "PocketBase",
-      icon: <SiPocketbase size={40} color="#000000" />,
+      icon: <SiPocketbase size={40} className="text-white dark:text-black" />,
     }, // React Icon
     position: { x: 650, y: 200 },
     type: "customNode", // Specify custom node type
@@ -231,7 +231,7 @@ const initialNodes = [
     id: "13",
     data: {
       label: "FireBase",
-      icon: <IoLogoFirebase size={40} color="#000000" />,
+      icon: <IoLogoFirebase size={40} className="text-white dark:text-black" />,
     }, // React Icon
     position: { x: 650, y: 350 },
     type: "customNode", // Specify custom node type
