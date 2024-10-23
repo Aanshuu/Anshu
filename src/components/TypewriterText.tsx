@@ -36,7 +36,7 @@ const TypewriterText = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ staggerChildren: 0.05 }}
-        className="text-4xl font-bold text-black dark:text-[#FECFC5] z-20 mb-4"
+        className="text-2xl md:text-4xl font-bold text-black dark:text-[#FECFC5] z-20 mb-4"
       >
         {headingChars.map((char, index) => (
           <motion.span
@@ -53,7 +53,7 @@ const TypewriterText = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ staggerChildren: 0.01 }}
-        className="text-md font-bold text-black dark:text-[#FECFC5] z-20"
+        className="text-sm md:text-md font-bold text-black dark:text-[#FECFC5] z-20"
       >
         {descriptionChars.map((char, index) => (
           <motion.span
