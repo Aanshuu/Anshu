@@ -54,7 +54,7 @@ export const ButtonTabs = ({
                 )}
               />
             )}
-            <span className="relative text-black dark:text-white">
+            <span className="relative text-black dark:text-white md:text-xl text-sm">
               {tab.title}
             </span>
           </button>
@@ -98,14 +98,14 @@ export function ProjectsExperienceDemo() {
         </div>
       ),
     },
-    {
-      title: "Personal",
-      value: "Personal",
-      content: (
-        <div>
-        </div>
-      ),
-    },
+    // {
+    //   title: "Personal",
+    //   value: "Personal",
+    //   content: (
+    //     <div>
+    //     </div>
+    //   ),
+    // },
   ];
 
   return (

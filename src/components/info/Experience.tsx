@@ -9,7 +9,7 @@ export function TimelineDemo() {
       title: "Magic Media",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-8">
+          <p className="text-black/90 dark:text-primary/90 text-sm md:text-lg font-normal mb-8">
             Developed a pixel-perfect, fully responsive website for a freelance
             project, enhancing functionality and ensuring seamless user
             experience across all devices.
@@ -37,7 +37,7 @@ export function TimelineDemo() {
       title: "SYNC",
       content: (
         <div>
-          <h2 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-8">
+          <h2 className="text-black/90 dark:text-primary/90 text-sm md:text-lg font-normal mb-8">
             Currently serving as a Founding Developer at a college-based startup
             in its early stages. Leading the development of intuitive user
             interfaces, enhancing user experience, and managing critical tasks
@@ -66,7 +66,7 @@ export function TimelineDemo() {
       title: "Weeked",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-4">
+          <p className="text-black/90 dark:text-primary/90 text-sm md:text-lg font-normal mb-4">
             Currently developing &apos;Weeked,&apos; a personal project I plan to launch
             as a startup in the future, with the vision that it will become a
             highly successful venture.
@@ -88,6 +88,17 @@ export function TimelineDemo() {
             />
           </div>
           <div className="grid grid-cols-2 gap-4"></div>
+        </div>
+      ),
+    },
+    {
+      title: "Let's Connect",
+      content: (
+        <div>
+          <p className="text-black/90 dark:text-primary/90 text-sm md:text-lg font-normal mb-4">
+            I&apos;m always open to new opportunities and collaborations. Feel
+            free to reach out to me for any queries or just to say hi!
+          </p>
         </div>
       ),
     },

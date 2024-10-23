@@ -15,7 +15,7 @@ export default function Diagram() {
   // };
   return (
     <div
-      className="flex justify-center items-center dark:bg-black mt-20 rounded-lg dark:shadow-dark-lg bg-primary transition-all duration-700 ease-in-out drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-[400px] h-[300px] md:w-[800px] md:h-[600px]"
+      className="flex justify-center items-center dark:bg-black mt-2 md:mt-4 rounded-lg dark:shadow-dark-lg bg-primary transition-all duration-700 ease-in-out drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-[380px] h-[300px] md:w-[800px] md:h-[600px]"
     >
       <svg
         viewBox="0 70 1000 600"
