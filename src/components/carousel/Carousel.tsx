@@ -50,7 +50,7 @@ export default function Carousel({ items }: CarouselProps) {
 
   return (
     <div
-      className="carousel-container relative h-20 w-auto sm:h-40 md:h-52"
+      className="carousel-container relative h-32 w-auto sm:h-40 md:h-52"
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onClick={handleClick}
