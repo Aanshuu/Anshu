@@ -1,5 +1,3 @@
-
-
 import { motion } from "framer-motion";
 // import { useState } from "react";
 
@@ -17,15 +15,14 @@ export default function Diagram() {
   // };
   return (
     <div
-      className="flex justify-center items-center dark:bg-black mt-20 rounded-lg dark:shadow-dark-lg bg-primary transition-all duration-700 ease-in-out drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
-      style={{ width: "800px", height: "600px" }}
+      className="flex justify-center items-center dark:bg-black mt-20 rounded-lg dark:shadow-dark-lg bg-primary transition-all duration-700 ease-in-out drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-[400px] h-[300px] md:w-[800px] md:h-[600px]"
     >
       <svg
         viewBox="0 70 1000 600"
         xmlns="http://www.w3.org/2000/svg"
         className="border rounded-xl shadow-lg p-5"
-        width="800"
-        height="600"
+        width="100%"
+        height="100%"
       >
         {/* Rectangles for nodes */}
         <motion.rect
@@ -410,10 +407,10 @@ export default function Diagram() {
 
         {/* Typescript to trpc */}
         <motion.path
-          d="M 150 375 L 300 375"  // Dotted line path
+          d="M 150 375 L 300 375" // Dotted line path
           className="stroke-[#000000] dark:stroke-[#FECFC5]"
           strokeWidth="2"
-          strokeDasharray="5 5"  // Dashed pattern
+          strokeDasharray="5 5" // Dashed pattern
           fill="transparent"
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
