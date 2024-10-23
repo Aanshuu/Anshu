@@ -58,7 +58,6 @@ export default function Home() {
       </div> */}
 
       <div className="relative h-screen">
-
         {/* <MatrixRain /> */}
         <div className="fixed top-0 w-full z-50">
           <Navbar />
@@ -69,7 +68,7 @@ export default function Home() {
             <div className="flex justify-center items-center w-full md:w-1/2">
               <TypewriterText />
             </div>
-            <div className="flex justify-center h-auto w-5/6 md:w-2/5">
+            <div className="flex justify-center h-auto w-5/6 md:w-2/5 mt-6 md:mt-0">
               <Slider />
             </div>
           </div>
@@ -86,6 +85,16 @@ export default function Home() {
             />
             <div className="m-2">
               <span className="text-sm text-gray-700">
+                {showDiagram ? (
+                  <h3 className="flex items-center justify-center text-xl md:text-5xl font-bold text-black dark:text-primary/70 mt-12 md:mt-20">
+                    Learning Curve
+                  </h3>
+                ) : (
+                  <h3 className="flex items-center justify-center text-xl md:text-5xl font-bold text-black dark:text-primary/70 md:mt-20 mt-12">
+                    Tech Stack
+                  </h3>
+                )}{" "}
+                {/* Debug text */}
                 {showDiagram ? <Diagram /> : <Flow />} {/* Debug text */}
               </span>
             </div>
