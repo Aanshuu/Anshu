@@ -147,13 +147,15 @@ const initialNodes = [
       icon: <GiTechnoHeart size={40} className="text-white dark:text-black"/>,
     }, // TypeScript Icon
     position: { x: 350, y: 275 },
-    type: "customNode", // Specify custom
+    type: "customNode",
+    draggable: false,
   },
   {
     id: "2",
     data: { icon: <FaNodeJs size={40} color="#68A063" /> }, // Node.js Icon
     position: { x: 250, y: 50 }, // Adjust the position for better spacing
-    type: "customNode", // Specify custom node type
+    type: "customNode",
+    draggable: false, 
   },
   {
     id: "3",
@@ -161,19 +163,22 @@ const initialNodes = [
       icon: <SiTypescript size={40} color="#007acc" />,
     }, // TypeScript Icon
     position: { x: 450, y: 50 },
-    type: "customNode", // Specify custom
+    type: "customNode",
+    draggable: false,
   },
   {
     id: "4",
     data: { icon: <FaReact size={40} color="#61dafb" /> }, // React Icon
     position: { x: 50, y: 50 },
-    type: "customNode", // Specify custom node type
+    type: "customNode",
+    draggable: false, 
   },
   {
     id: "5",
     data: { icon: <FaCss3Alt size={40} color="#61dafb" /> }, // React Icon
     position: { x: 50, y: 200 },
-    type: "customNode", // Specify custom node type
+    type: "customNode",
+    draggable: false, 
   },
   {
     id: "6",
@@ -181,19 +186,22 @@ const initialNodes = [
       icon: <IoLogoJavascript size={40} color="#fbb917" />,
     }, // React Icon
     position: { x: 50, y: 350 },
-    type: "customNode", // Specify custom node type
+    type: "customNode",
+    draggable: false, 
   },
   {
     id: "7",
     data: { icon: <FaHtml5 size={40} color="#e34c26" /> }, // React Icon
     position: { x: 50, y: 500 },
-    type: "customNode", // Specify custom node type
+    type: "customNode",
+    draggable: false, 
   },
   {
     id: "8",
     data: {  icon: <SiFramer size={40} className="text-white dark:text-black" /> }, // React Icon
     position: { x: 250, y: 500 },
-    type: "customNode", // Specify custom node type
+    type: "customNode",
+    draggable: false, 
   },
   {
     id: "9",
@@ -201,19 +209,22 @@ const initialNodes = [
       icon: <RiTailwindCssFill size={40} color="#61dafb" />,
     }, // React Icon
     position: { x: 450, y: 500 },
-    type: "customNode", // Specify custom node type
+    type: "customNode",
+    draggable: false, 
   },
   {
     id: "10",
     data: { icon: <FaGitAlt size={40} className="text-white dark:text-black" /> }, // React Icon
     position: { x: 650, y: 500 },
-    type: "customNode", // Specify custom node type
+    type: "customNode",
+    draggable: false, 
   },
   {
     id: "11",
     data: { icon: <RiNextjsFill size={40} className="text-white dark:text-black" /> }, // React Icon
     position: { x: 650, y: 50 },
-    type: "customNode", // Specify custom node type
+    type: "customNode",
+    draggable: false, 
   },
   {
     id: "12",
@@ -221,7 +232,8 @@ const initialNodes = [
       icon: <SiPocketbase size={40} className="text-white dark:text-black" />,
     }, // React Icon
     position: { x: 650, y: 200 },
-    type: "customNode", // Specify custom node type
+    type: "customNode", 
+    draggable: false,
   },
   {
     id: "13",
@@ -229,7 +241,8 @@ const initialNodes = [
       icon: <IoLogoFirebase size={40} className="text-white dark:text-black" />,
     }, // React Icon
     position: { x: 650, y: 350 },
-    type: "customNode", // Specify custom node type
+    type: "customNode", 
+    draggable: false,
   },
 ];
 
@@ -408,7 +421,7 @@ function Flow() {
   // const [edges] = useEdgesState(initialEdges); // Static edges
 
   return (
-    <div className="flex items-center justify-center flow-container h-[50vh] w-[50vw] rounded-3xl dark:bg-black dark:shadow-dark-lg bg-primary drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] mt-20">
+    <div className="flex items-center justify-center flow-container h-[45vh] w-[95vw] md:w-[70vw] lg:w-[50vw] lg:h-[60vh] rounded-3xl dark:bg-black dark:shadow-dark-lg bg-primary drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] mt-20">
       <ReactFlow
         nodes={nodes}
         edges={edges}
