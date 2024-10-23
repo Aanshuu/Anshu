@@ -58,14 +58,18 @@ export default function Home() {
       </div> */}
 
       <div className="relative h-screen">
+
         {/* <MatrixRain /> */}
-        <Navbar />
+        <div className="fixed top-0 w-full z-50">
+          <Navbar />
+        </div>
+
         <MaxWidthWrapper className="h-full pt-28">
-          <div className="flex md:flex-row gap-8 items-center justify-between">
-            <div className="flex justify-center w-full md:w-1/2">
+          <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
+            <div className="flex justify-center items-center w-full md:w-1/2">
               <TypewriterText />
             </div>
-            <div className="flex justify-center h-auto w-2/5 md:w-2/5">
+            <div className="flex justify-center h-auto w-5/6 md:w-2/5">
               <Slider />
             </div>
           </div>
@@ -80,7 +84,7 @@ export default function Home() {
               defaultChecked={showDiagram}
               className="bg-black dark:bg-white"
             />
-            <div className="ml-4">
+            <div className="m-2">
               <span className="text-sm text-gray-700">
                 {showDiagram ? <Diagram /> : <Flow />} {/* Debug text */}
               </span>
