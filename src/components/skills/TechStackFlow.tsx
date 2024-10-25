@@ -94,19 +94,19 @@ const CustomNode: React.FC<IconNodeProps> = ({ data }) => {
         type="target"
         position={Position.Right}
         id="right-top"
-        style={{ right: "25%", visibility: "hidden" }}
+        style={{ top: "25%", visibility: "hidden" }}
       />
       <Handle
         type="target"
         position={Position.Right}
         id="right-middle"
-        style={{ right: "50%", visibility: "hidden" }}
+        style={{ top: "50%", visibility: "hidden" }}
       />
       <Handle
         type="target"
         position={Position.Right}
         id="right-end"
-        style={{ right: "75%", visibility: "hidden" }}
+        style={{ top: "75%", visibility: "hidden" }}
       />
       {/* Default bottom source handle */}
       <Handle
@@ -379,7 +379,7 @@ function Flow() {
         id: "e11-1",
         source: "11",
         target: "1",
-        targetHandle: "right-middle",
+        targetHandle: "right-top",
         sourceHandle: "left",
         type: "default",
         animated: true,
@@ -392,7 +392,7 @@ function Flow() {
         id: "e12-1",
         source: "12",
         target: "1",
-        targetHandle: "right-top",
+        targetHandle: "right-middle",
         sourceHandle: "left",
         type: "default",
         animated: true,
