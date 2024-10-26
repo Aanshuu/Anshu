@@ -31,7 +31,7 @@ const TypewriterText = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center z-10">
       <motion.h1
         initial="hidden"
         whileInView="visible"
