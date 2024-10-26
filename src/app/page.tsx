@@ -3,7 +3,7 @@
 import MaxWidthWrapper from "@/components/common/MaxWidthWrapper";
 import { useState } from "react";
 // import ThemeToggle from "@/components/theme/ThemeToggle";
-import MatrixRain from "@/components/MatrixRain";
+// import MatrixRain from "@/components/MatrixRain";
 import TypewriterText from "@/components/TypewriterText";
 import Slider from "@/components/Slider";
 import { ThemeProvider } from "@/components/theme/ThemeContext";
