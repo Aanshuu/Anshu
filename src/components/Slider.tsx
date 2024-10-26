@@ -7,11 +7,16 @@ import { Switch } from "./ui/switch";
 interface SliderProps {
   onToggle: (checked: boolean) => void;
   showDiagram: boolean;
-  onToggleDecorativeTheme: (checked: boolean) => void;
-  decorativeTheme: boolean;
+  // onToggleDecorativeTheme: (checked: boolean) => void;
+  // decorativeTheme: boolean;
 }
 
-const HomePage: FC<SliderProps> = ({ onToggle, showDiagram, onToggleDecorativeTheme, decorativeTheme }) => {
+const HomePage: FC<SliderProps> = ({
+  onToggle,
+  showDiagram,
+  // onToggleDecorativeTheme,
+  // decorativeTheme,
+}) => {
   const { theme } = useTheme();
 
   // Fetch URLs for both themes without cache busting and store them
@@ -96,29 +101,29 @@ const HomePage: FC<SliderProps> = ({ onToggle, showDiagram, onToggleDecorativeTh
       key="4"
       className="h-full w-full flex items-center justify-center bg-primary dark:bg-black"
     >
-      <div>
+      {/* <div> */}
         <h1 className="text-3xl font-bold text-black dark:text-[#fecfc5]">
           More Content
         </h1>
-        <div onClick={(e) => e.stopPropagation()} className="p-2">
+        <div onClick={(e) => e.stopPropagation()} className="ml-2 mt-1">
           <Switch
             onCheckedChange={onToggle}
             defaultChecked={showDiagram}
-            className="bg-black dark:bg-white"
+            className="bg-black dark:bg-white dark:shadow-dark-lg"
           />
-        </div>
-        <div>
-        <h1 className="text-3xl font-bold text-black dark:text-[#fecfc5]">
-          For Dark Theme
-        </h1>
-        <div onClick={(e) => e.stopPropagation()} className="p-2">
-          <Switch
-            onCheckedChange={onToggleDecorativeTheme}
-            defaultChecked={decorativeTheme}
-            className="bg-black dark:bg-white"
-          />
-        </div>
-        </div>
+        {/* </div> */}
+        {/* <div>
+          <h1 className="text-3xl font-bold text-black dark:text-[#fecfc5]">
+            For Dark Theme
+          </h1>
+          <div onClick={(e) => e.stopPropagation()} className="p-2">
+            <Switch
+              onCheckedChange={onToggleDecorativeTheme}
+              defaultChecked={decorativeTheme}
+              className="bg-black dark:bg-white"
+            />
+          </div>
+        </div> */}
       </div>
     </div>,
   ];

@@ -18,19 +18,19 @@ import { ProjectsExperienceDemo } from "@/components/Tabs";
 export default function Home() {
   const [showDiagram, setShowDiagram] = useState(false);
 
-  const [decorativeTheme, setDecorativeTheme] = useState(false);
+  // const [decorativeTheme, setDecorativeTheme] = useState(false);
 
   const handleToggle = (checked: boolean) => {
     console.log("Switch toggled:", checked); // Debug log
     setShowDiagram(checked);
   };
-  const handleToggleDecorativeTheme = (checked: boolean) => {
-    console.log("Switch toggled:", checked); // Debug log
-    setDecorativeTheme(checked);
-  }
+  // const handleToggleDecorativeTheme = (checked: boolean) => {
+  //   console.log("Switch toggled:", checked); // Debug log
+  //   setDecorativeTheme(checked);
+  // }
   return (
     <ThemeProvider>
-      {decorativeTheme ? (
+      {/* {decorativeTheme ? (
         <>
           <div>
             <div className="relative isolate">
@@ -64,11 +64,10 @@ export default function Home() {
             </div>
           </div>
         </>
-      ) : null}
+      ) : null} */}
 
       <div className="relative h-screen">
-        {decorativeTheme ? <MatrixRain /> : null}
-        {/* <MatrixRain /> */}
+        {/* {decorativeTheme ? <MatrixRain /> : null} */}
         <div className="fixed top-0 w-full z-50">
           <Navbar />
         </div>
@@ -79,7 +78,12 @@ export default function Home() {
               <TypewriterText />
             </div>
             <div className="flex justify-center h-auto w-5/6 md:w-2/5 mt-6 md:mt-0">
-              <Slider onToggle={handleToggle} showDiagram={showDiagram} onToggleDecorativeTheme={handleToggleDecorativeTheme} decorativeTheme={decorativeTheme}/>
+              <Slider
+                onToggle={handleToggle}
+                showDiagram={showDiagram}
+                // onToggleDecorativeTheme={handleToggleDecorativeTheme}
+                // decorativeTheme={decorativeTheme}
+              />
             </div>
           </div>
           {/* <Setup/> */}
