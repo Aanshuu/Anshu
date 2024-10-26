@@ -1,7 +1,7 @@
 "use client";
 
 import MaxWidthWrapper from "@/components/common/MaxWidthWrapper";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import ThemeToggle from "@/components/theme/ThemeToggle";
 // import MatrixRain from "@/components/MatrixRain";
 import TypewriterText from "@/components/TypewriterText";
@@ -14,10 +14,18 @@ import Flow from "@/components/skills/TechStackFlow";
 // import { CardHoverEffectDemo } from "@/components/info/Projects";
 // import { NavigationButtons } from "@/components/Tabs";
 import { ProjectsExperienceDemo } from "@/components/Tabs";
+import Loader from "@/components/Loader";
 
 export default function Home() {
   const [showDiagram, setShowDiagram] = useState(false);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    },2000);
+    return () => clearTimeout(timer);
+  },[]);
   // const [decorativeTheme, setDecorativeTheme] = useState(false);
 
   const handleToggle = (checked: boolean) => {
@@ -28,6 +36,9 @@ export default function Home() {
   //   console.log("Switch toggled:", checked); // Debug log
   //   setDecorativeTheme(checked);
   // }
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <ThemeProvider>
       {/* {decorativeTheme ? (
