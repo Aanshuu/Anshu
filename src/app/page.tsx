@@ -84,11 +84,11 @@ export default function Home() {
         </div>
 
         <MaxWidthWrapper className="h-full pt-28">
-          <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
-            <div className="flex justify-center items-center w-full md:w-1/2">
+          <div className="flex flex-col xl:flex-row gap-8 items-center justify-between">
+            <div className="flex justify-center items-center w-11/12 md:w-9/12 lg:w-7/12 xl:w-2/5">
               <TypewriterText />
             </div>
-            <div className="flex justify-center h-auto w-5/6 md:w-2/5 mt-6 md:mt-0">
+            <div className="flex justify-center h-auto w-10/12 md:w-9/12 lg:w-7/12 xl:w-2/5 mt-6 md:mt-0">
               <Slider
                 onToggle={handleToggle}
                 showDiagram={showDiagram}
