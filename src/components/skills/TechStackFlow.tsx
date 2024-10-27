@@ -421,7 +421,7 @@ function Flow() {
   // const [edges] = useEdgesState(initialEdges); // Static edges
 
   return (
-    <div className="flex items-center justify-center flow-container h-[45vh] w-[95vw] md:w-[70vw] lg:w-[50vw] lg:h-[60vh] rounded-3xl dark:bg-black dark:shadow-dark-lg bg-primary drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] md:mt-4 mt-2">
+    <div className="flex items-center justify-center flow-container h-[45vh] w-[90vw] md:w-[70vw] lg:w-[50vw] lg:h-[60vh] rounded-3xl dark:bg-black dark:shadow-dark-lg bg-primary drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] md:mt-4 mt-2">
       <ReactFlow
         nodes={nodes}
         edges={edges}
