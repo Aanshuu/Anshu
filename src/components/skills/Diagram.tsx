@@ -15,12 +15,12 @@ export default function Diagram() {
   // };
   return (
     <div
-      className="flex justify-center items-center dark:bg-black mt-2 md:mt-4 rounded-lg dark:shadow-dark-lg bg-primary transition-all duration-700 ease-in-out drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-[360px] h-[300px] md:w-[800px] md:h-[600px]"
+      className="flex justify-center items-center dark:bg-black mt-2 md:mt-4 rounded-lg dark:shadow-dark-lg bg-primary transition-all duration-700 ease-in-out drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-[350px] h-[300px] md:w-[800px] md:h-[600px]"
     >
       <svg
         viewBox="0 70 1000 600"
         xmlns="http://www.w3.org/2000/svg"
-        className="border rounded-xl shadow-lg p-5"
+        className="border rounded-xl shadow-lg p-2 md:p-6"
         width="100%"
         height="100%"
       >

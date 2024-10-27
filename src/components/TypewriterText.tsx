@@ -4,7 +4,7 @@ import splitStringUsingRegex from "@/lib/splitStringUsingRegex";
 const TypewriterText = () => {
   const Heading = "Hello, I am Anshu 👋";
   const Description =
-    "I hate css and frontend development, and this site was a nightmare for me but still did it and will continue building projects, since I love to build. All my projects are like seeds for me. With proper care, time and effort you raise a tree. 🌱";
+    "I build products and websites that bring ideas to life. Not just a techie—I'm a creator driven by the excitement of learning and building. Every project is a chance to innovate and make a meaningful impact.";
   const descriptionChars = splitStringUsingRegex(Description);
   const headingChars = splitStringUsingRegex(Heading);
 
